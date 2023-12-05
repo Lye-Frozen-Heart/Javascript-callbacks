@@ -13,3 +13,20 @@
  * output
  *  - string
  */
+/**
+ * Passed an email as a string generates a random number between zero and one,
+ * if this number is less than 0.5 or email is empty then returns a function
+ * validated string
+ * @param {string} email
+ * @param {function} onError
+ * @param {function} onSuccess
+ * @returns {string}
+ */
+const createUser = (email, onError, onSuccess) => {
+  const randomNumber = Math.random().toFixed(1);
+  if (email !== "" && randomNumber > 0.5) {
+    return onSuccess(email);
+  }
+  return onError();
+};
+export default createUser;
