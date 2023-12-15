@@ -6,9 +6,9 @@
  */
 const validateString = (value) => {
   if (
+    value === "" ||
     typeof value === "undefined" ||
-    typeof value !== "string" ||
-    value === ""
+    typeof value !== "string"
   ) {
     return false;
   }
