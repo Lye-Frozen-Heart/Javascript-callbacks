@@ -19,7 +19,7 @@ describe("Given function transformStringToCollection", () => {
       const result = transformStringToCollection(
         inputNumber,
         mockOnError,
-        mockOnSuccess
+        mockOnSuccess,
       );
       // Assert
       expect(result).toEqual([]);
@@ -34,7 +34,7 @@ describe("Given function transformStringToCollection", () => {
         const result = transformStringToCollection(
           inputCollection,
           mockOnError,
-          mockOnSuccess
+          mockOnSuccess,
         );
         // Assert
         expect(result).toEqual([]);
@@ -49,7 +49,7 @@ describe("Given function transformStringToCollection", () => {
         const result = transformStringToCollection(
           inputBoolean,
           mockOnError,
-          mockOnSuccess
+          mockOnSuccess,
         );
         // Assert
         expect(result).toEqual([]);
@@ -64,7 +64,7 @@ describe("Given function transformStringToCollection", () => {
         const result = transformStringToCollection(
           inputEmptyString,
           mockOnError,
-          mockOnSuccess
+          mockOnSuccess,
         );
         // Assert
         expect(result).toEqual([]);
@@ -79,7 +79,7 @@ describe("Given function transformStringToCollection", () => {
         const result = transformStringToCollection(
           inputEmptyString,
           mockOnError,
-          mockOnSuccess
+          mockOnSuccess,
         );
         // Assert
         expect(result).toEqual(["Hola", "me", "llamo", "Alex"]);

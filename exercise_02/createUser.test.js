@@ -35,7 +35,7 @@ describe("Given function createUser", () => {
 
       // Assert
       expect(result).toBe(
-        "User with email: email@gmail.com has been correctly created"
+        "User with email: email@gmail.com has been correctly created",
       );
       expect(mockOnSuccess).toHaveBeenCalledTimes(1);
     });

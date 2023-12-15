@@ -13,5 +13,5 @@ console.log("Bool: " + transformStringToArray(true, onError, onSuccess));
 console.log("Empty String: " + transformStringToArray(" ", onError, onSuccess));
 
 console.log(
-  "String: " + transformStringToArray("Hola me llamo Alex", onError, onSuccess)
+  "String: " + transformStringToArray("Hola me llamo Alex", onError, onSuccess),
 );
