@@ -1,3 +1,4 @@
+import validateString from "../helpers/validateString.js";
 /**
  * Define 'transformStringToArray' function and signature (JSDocs)
  *
@@ -13,15 +14,17 @@
  *  - array
  */
 /**
- * If received specified value is not a string or it is an empty string,
- *  then call onError callback otherwise, call onSuccess function
+ * When received a value that is not a string, return an empty array
+ * if it's a string call onSuccess function which returns an array of words from the string
  * @param {any} value
  * @param {function} onError
  * @param {function} onSuccess
  * @returns {Array}
  */
 const transformStringToArray = (value, onError, onSuccess) => {
-  if (typeof value !== "string") return onError();
+  if (!validateString(value)) {
+    return onError();
+  }
   return onSuccess(value);
 };
 export default transformStringToArray;
